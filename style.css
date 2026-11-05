@@ -1,0 +1,130 @@
+:root {
+  --primary: #4A90E2; /* Biru ceria */
+  --primary-dark: #2C3E50;
+  --bg-color: #E3F2FD; /* Latar belakang biru muda */
+  --card-bg: #FFFFFF;
+  --coral: #FF5252; /* Merah bahaya */
+  --yellow: #FFD54F; /* Kuning koin */
+  --text: #37474F;
+  --muted: #78909C;
+  --green: #4CAF50;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-color);
+  color: var(--text);
+  font-family: 'Fredoka', sans-serif;
+}
+
+.topbar {
+  width: 100%;
+  padding: 24px 16px 36px;
+  background: var(--primary);
+  color: #fff;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.tag {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: var(--yellow);
+  color: #333;
+  font-size: 0.9em;
+  font-weight: 700;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+h1 {
+  margin: 12px 0 0;
+  font-size: clamp(1.8em, 5vw, 2.8em);
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+h1 span {
+  display: block;
+  margin-top: 6px;
+  color: #E3F2FD;
+  font-size: 0.5em;
+  font-weight: 400;
+}
+
+.card {
+  /* Responsif di layar kecil */
+  width: min(840px, calc(100% - 32px)); 
+  margin: -24px 0 40px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  background: var(--card-bg);
+  border-radius: 24px;
+  border: 4px solid #fff;
+  box-shadow: 0 15px 35px rgba(74, 144, 226, 0.2);
+}
+
+canvas {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  border-radius: 16px;
+  cursor: crosshair;
+  touch-action: none; /* geser jari di canvas untuk gerak, bukan scroll halaman */
+  background-color: #a8e6cf;
+  box-shadow: inset 0 0 20px rgba(0,0,0,0.1);
+}
+
+.info {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+}
+
+.chip {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--primary-dark);
+  color: #fff;
+  font-size: 1em;
+  font-weight: 600;
+}
+
+#message:empty {
+  display: none;
+}
+
+#message {
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: var(--coral);
+  color: #fff;
+  font-weight: bold;
+  animation: pop 0.3s ease-out;
+}
+
+.caption {
+  margin: 0;
+  color: var(--muted);
+  text-align: center;
+  font-weight: 600;
+}
+
+@keyframes pop {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}

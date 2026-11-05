@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catch the Coin - Final Web Game</title>
+  <!-- Menambahkan Font Fredoka untuk tema game ceria -->
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <span class="tag">PEMROGRAMAN GAME BERBASIS WEB</span>
+    <h1>Catch the Coin 🌟<span>Final Web Game: Testing, Debugging & Finalisasi</span></h1>
+  </header>
+
+  <main class="card">
+    <!-- Canvas untuk Game -->
+    <canvas id="gameCanvas" width="800" height="500"></canvas>
+
+    <div class="info">
+      <span class="chip">🎮 ↑ ↓ ← → Gerak</span>
+      <span class="chip">👆 Di HP: sentuh & geser layar</span>
+      <span class="chip">🖱️ Klik Tombol Suara / Tombol 'M' : Mute</span>
+      <span id="message"></span>
+    </div>
+
+    <p class="caption">Ambil koin emas, hindari musuh merah! Kumpulkan poin sebanyak-banyaknya.</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
