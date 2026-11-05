@@ -3,7 +3,7 @@
 Game web sederhana (HTML5 Canvas) untuk mata kuliah Pemrograman Game Berbasis Web.
 Ambil koin emas, hindari kotak merah. Kumpulkan 100 poin sebelum waktu 30 detik habis.
 
-Pembuat: _isi nama & NIM_
+Pembuat: Adjie Ahmad Pahlevie
 
 ## Cara menjalankan
 
